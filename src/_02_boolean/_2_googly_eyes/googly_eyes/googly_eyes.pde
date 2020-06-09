@@ -10,10 +10,21 @@ void setup() {
 
 void draw() {
   background(face);
-fill(mouseX,0,0);{
-ellipse(250,278,10,30);
-fill(102,0,0);{
-ellipse(500,220,10,30);
+fill(102,0,0);
+ellipse(mouseX,mouseY,10,30);
+fill(102,0,0);
+ellipse(mouseX + 300, mouseY - 70,10,30);
+//println(mouseX + " " + mouseY);
+if(mouseX > 280) {
+  mouseX = 280;
 }
+else if(mouseX < 190) {
+  mouseX = 190;
+}
+if(mouseY < 220) {
+  mouseY = 220;
+}
+else if (mouseY > 320) {
+  mouseY =320;
 }
 }
