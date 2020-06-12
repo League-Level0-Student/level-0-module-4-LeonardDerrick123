@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 /*
 import ddf.minim.*;
 Minim minim = new Minim(this); 
@@ -17,24 +18,16 @@ void setup() {
     woohoo = minim.loadSample("homer-woohoo.wav"); 
   */
 }
-
 void draw() {
       // Use this print statement to find out the coordinates of Waldo when you press the mouse
-      println("X: " + mouseX + " Y: " + mouseY); 
       if(mousePressed) {
-if(mouseX > 463) {
-  mouseX = 2463;
+if(mouseX < 520 && mouseX > 460 && mouseY > 260 && mouseY < 350) {
+System.out.println(
+"Horray, you found Waldo!!!"
+);
 }
-else if(mouseX < 253) {
-  mouseX = 253;
-}
-if(mouseY < 354) {
-  mouseY = 354;
-}
-else if (mouseY > 253) {
-  mouseY =253;
-}
-}
+
+      }
 /**********  Now to add the sounds. You will need to uncomment all the code and import the Minim library ********/
 
       // If Waldo is found, also use a method below to play “Woohoo”
