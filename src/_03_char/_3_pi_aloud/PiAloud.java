@@ -7,15 +7,21 @@ public class PiAloud {
 
 	// 1. Make a main method and make sure your program can run
 public static void main(String[] args) {
-	String string = "3.14159265358979323846"
-}
+	String pi = "3.14159265358979323846";
+
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
  
 	// 3. Print out 3 digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
 	// Check the console shows 3.1
-
+System.out.println(pi.charAt(0));
+System.out.println(pi.charAt(1));
+System.out.println(pi.charAt(2));
 	// 4. Print ALL the digits of of the Pi String (hint: use a loop)
-
+for(int i=0;i<pi.length();i++) {
+	System.out.println(pi.charAt(i));
+	speak(pi.charAt(i));
+}
+	
 	// 5. Use the speak() method below to speak each digit of Pi.
 
 	// [CHALLENGE]
@@ -25,7 +31,7 @@ public static void main(String[] args) {
 	
 	
 	
-	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
+}/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
 	static void speak(char characterToSpeak) {
 		try {
